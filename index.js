@@ -12,7 +12,7 @@ document.addEventListener("click", (e) => {
         element.classList.add("new");
         if (!element.parentElement.classList.contains("input")) {
             input.appendChild(cloned);
-            if (element.classList.contains("search")) {contenteditable.innerText = ""; onInput();}
+            if (element.classList.contains("search")) {contenteditable.innerText = "";}
         } else {
             document.getElementsByClassName("content")[0].appendChild(cloned);
         }
@@ -26,6 +26,7 @@ document.addEventListener("click", (e) => {
             } else {
                 input.getElementsByClassName("save-as-group")[0].classList.remove("show");
             }
+            onInput();
         });
     }
 });
@@ -55,8 +56,7 @@ const onInput = (e) => {
             newEl.classList.add("chip", "search");
             suggestionsContent.appendChild(newEl);
         });
-        debugger
-        Array.from(chips).forEach(chip => !chip.classList.contains("search") && chip.classList.add("hide"))
+        Array.from(chips).forEach(chip => !chip.classList.contains("search") && !chip.parentElement.classList.contains("input") && chip.classList.add("hide"))
     }
     else {
         Array.from(chips).forEach(chip => chip.classList.remove("hide"));
