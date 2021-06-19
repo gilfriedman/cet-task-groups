@@ -63,4 +63,4 @@ const onInput = (e) => {
     }
 }
 
-contenteditable.addEventListener("input", onInput)
+contenteditable.addEventListener("input", onInput);
