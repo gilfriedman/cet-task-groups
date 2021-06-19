@@ -59,7 +59,7 @@ const onInput = (e) => {
         Array.from(chips).forEach(chip => !chip.classList.contains("search") && chip.classList.add("hide"))
     }
     else {
-        Array.from(chips).forEach(chip => chip.classList.remove("hide"))
+        Array.from(chips).forEach(chip => chip.classList.remove("hide"));
     }
 }
 
