@@ -1,0 +1,96 @@
+html {
+    font-family: 'Heebo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    margin: 200px 400px;
+}
+
+.chip {
+    /* background-color: #80808073; */
+    border: 1px solid rgba(0, 0, 0, 0.473);
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.chip.new {
+    opacity: 0;
+}
+
+.input .chip {
+    cursor: default;
+    pointer-events: none;
+}
+
+.input .chip:after {
+    content: "×";
+    color: red;
+    cursor: pointer;
+    margin-right: 10px;
+    pointer-events: all;
+}
+
+.chip:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.input {
+    height: 40px;
+    border-radius: 9px;
+    border: 1px solid #00000070;
+    font-size: 20px;
+    width: 100%;
+    margin: 20px 0 30px 0;
+    outline: none;
+    padding: 10px;
+    font-family: 'Heebo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    display: flex;
+}
+
+.input:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.contenteditable {
+    flex-grow: 1;
+    order: 1;
+    padding: 7px;
+}
+
+.contenteditable:focus-visible {
+    outline: none;
+}
+
+.save-as-group {
+    order: 2;
+    padding: 7px;
+    opacity: 0;
+    transition: all .2s ease-in;
+}
+
+.save-as-group.show {
+    opacity: 1;
+}
+
+.suggestions {
+    display: flex;
+    margin: 0 10px;
+}
+
+.suggestions .title {
+    font-style: italic;
+    margin-left: 20px;
+    line-height: 32px;
+}
+
+.suggestions .content {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
